@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://466w605y66pe"]
+
+[ext_resource type="Texture2D" uid="uid://bhqgl4exyj27u" path="res://Assets/Arts/Crank.png" id="1_vfiox"]
+[ext_resource type="Script" uid="uid://d1m3v6ytj1717" path="res://Scripts/crank.gd" id="1_wditd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lakht"]
+bg_color = Color(0.270588, 0.14902, 0.0313726, 0.509804)
+
+[node name="Crank" type="Panel"]
+custom_minimum_size = Vector2(640, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lakht")
+script = ExtResource("1_wditd")
+
+[node name="CrankTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vfiox")
