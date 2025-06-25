@@ -1,4 +1,7 @@
 extends Node2D
 
+@onready var hand := $HandHandler/TheHand
+
 func _ready() -> void:
-	BackGround.change_color(0.2, 0.2, 0, 1)
+	Ui.show()
+	BackGround.change_color(0.1, 0.1, 0, 1)

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://f3arbemxa4pe"]
+
+[ext_resource type="Script" uid="uid://o7me2q5ludil" path="res://Scripts/hand.gd" id="1_f6hnx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1ny2"]
+bg_color = Color(1, 0.0627451, 0.847059, 0.184314)
+
+[node name="Hand" type="Panel"]
+custom_minimum_size = Vector2(640, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m1ny2")
+script = ExtResource("1_f6hnx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -20.0
+offset_right = 23.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "The hand is waiting to be used
+It costs 20 energy to get some
+minerals and crystals"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Use" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "USE"
+
+[connection signal="pressed" from="VBoxContainer/Use" to="." method="_on_use_pressed"]

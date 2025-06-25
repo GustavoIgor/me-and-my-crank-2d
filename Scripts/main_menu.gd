@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 func _ready() -> void:
+	Ui.hide()
 	BackGround.change_color(0, 0, 0, 1)
 
 func _on_play_pressed() -> void:

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfprvo7kw636r"]
+
+[ext_resource type="Texture2D" uid="uid://dso7djg85hehw" path="res://Assets/Arts/the hand.png" id="1_wpsm4"]
+[ext_resource type="Script" uid="uid://c1kh1pwtkhoji" path="res://Scripts/the_hand.gd" id="2_guvvb"]
+
+[sub_resource type="Animation" id="Animation_guvvb"]
+resource_name = "working"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 16), Vector2(0, 20), Vector2(0, 16), Vector2(0, 20), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ldq0j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yuesg"]
+_data = {
+&"RESET": SubResource("Animation_ldq0j"),
+&"working": SubResource("Animation_guvvb")
+}
+
+[node name="TheHand" type="Sprite2D"]
+position = Vector2(0, 16)
+texture = ExtResource("1_wpsm4")
+script = ExtResource("2_guvvb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yuesg")
+}
