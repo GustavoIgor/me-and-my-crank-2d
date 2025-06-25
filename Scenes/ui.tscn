@@ -1,11 +1,104 @@
-[gd_scene load_steps=2 format=3 uid="uid://ytu2qogj7jrq"]
+[gd_scene load_steps=5 format=3 uid="uid://ytu2qogj7jrq"]
 
 [ext_resource type="Script" uid="uid://diykioubsecf0" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://bgh2dk26lc3il" path="res://Assets/Arts/energy.png" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://4bjf1gfc3kn" path="res://Assets/Arts/Minerals.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://bsyj53e38be8v" path="res://Assets/Arts/Crystals.png" id="4_2246s"]
 
 [node name="UI" type="CanvasLayer"]
 layer = 2
 script = ExtResource("1_jxero")
 
-[node name="Test" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="UpperPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UpperPanel"]
+custom_minimum_size = Vector2(940, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Energy" type="HBoxContainer" parent="UpperPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpperPanel/HBoxContainer/Energy"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UpperPanel/HBoxContainer/Energy/VBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_qdvrb")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="UpperPanel/HBoxContainer/Energy/VBoxContainer"]
+layout_mode = 2
+text = "Energy"
+
+[node name="ProgressBar" type="ProgressBar" parent="UpperPanel/HBoxContainer/Energy"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_vertical = 4
+show_percentage = false
+
+[node name="Numbers" type="Label" parent="UpperPanel/HBoxContainer/Energy/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Minerals" type="HBoxContainer" parent="UpperPanel/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpperPanel/HBoxContainer/Minerals"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UpperPanel/HBoxContainer/Minerals/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_nf4gj")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="UpperPanel/HBoxContainer/Minerals/VBoxContainer"]
+layout_mode = 2
+text = "Minerals"
+
+[node name="Numbers" type="Label" parent="UpperPanel/HBoxContainer/Minerals"]
+layout_mode = 2
+text = "45"
+
+[node name="Crystals" type="HBoxContainer" parent="UpperPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpperPanel/HBoxContainer/Crystals"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UpperPanel/HBoxContainer/Crystals/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_2246s")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="UpperPanel/HBoxContainer/Crystals/VBoxContainer"]
+layout_mode = 2
+text = "Crystals"
+
+[node name="Numbers" type="Label" parent="UpperPanel/HBoxContainer/Crystals"]
+layout_mode = 2

@@ -10,9 +10,9 @@ bg_color = Color(1, 0.0627451, 0.847059, 0.184314)
 script = ExtResource("1_m1ny2")
 
 [node name="Crank" parent="." instance=ExtResource("1_om80o")]
-visible = false
 
 [node name="Hand" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(640, 400)
 anchors_preset = 8
 anchor_left = 0.5
