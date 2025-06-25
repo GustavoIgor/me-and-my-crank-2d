@@ -23,6 +23,7 @@ BackGround="*res://Scenes/back_ground.tscn"
 Ui="*res://Scenes/ui.tscn"
 DialogueDataBase="*res://Scenes/dialogue_data_base.tscn"
 DialogueManager="*res://Scenes/dialogue_manager.tscn"
+SoundManager="*res://Scenes/sound_manager.tscn"
 
 [display]
 

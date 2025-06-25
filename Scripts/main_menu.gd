@@ -5,3 +5,7 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	Fade.fade_transition("res://Scenes/world.tscn")
+
+
+func _on_credits_pressed() -> void:
+	Fade.fade_transition("res://Scenes/credits.tscn")
