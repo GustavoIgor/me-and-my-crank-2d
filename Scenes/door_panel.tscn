@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://da6xbhbirc81"]
+
+[ext_resource type="Script" uid="uid://7kj5vgelf74d" path="res://Scripts/door_panel.gd" id="1_eeeot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rplbg"]
+bg_color = Color(0.27451, 0.603922, 1, 0.4)
+
+[node name="DoorPanel" type="Panel"]
+custom_minimum_size = Vector2(640, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -200.0
+offset_right = 320.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_rplbg")
+script = ExtResource("1_eeeot")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Open" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "OPEN"
+
+[node name="FeedBackLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Open" to="." method="_on_open_pressed"]

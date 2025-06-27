@@ -36,6 +36,8 @@ func animate_player(direction : Vector2):
 		animation.play("idle")
 
 func _on_game_paused():
+	SoundManager.stop_foot_steps()
+	animation.play("idle")
 	game_paused = true
 
 func _on_game_unpaused():

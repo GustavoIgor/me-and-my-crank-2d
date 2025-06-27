@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfms6guvtgcvm"]
+
+[ext_resource type="Script" uid="uid://cyj73nw8o2o16" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://dum32mcubu1um" path="res://Assets/Arts/door.png" id="2_fahql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4ky"]
+size = Vector2(10, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a43ba"]
+radius = 45.0
+
+[node name="Door" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 7
+input_pickable = true
+script = ExtResource("1_p0e35")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fahql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ab4ky")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_a43ba")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -16,7 +16,8 @@ var max_energy : = 100
 
 var stats : Dictionary = {
 	"minerals" : 0,
-	"crystals" : 0
+	"crystals" : 0,
+	"infuseds" : 0
 }
 
 var player_stats : Dictionary = {
@@ -37,5 +38,3 @@ func change_max_energy(amount : int):
 func change_stats(stat : String, amount : int):
 	stats[stat] += amount
 	stat_changed.emit()
-	
-	
