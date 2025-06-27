@@ -3,14 +3,25 @@ extends Node
 @onready var sfx := $SFX
 @onready var sfx2 := $SFX2
 @onready var music := $Music
+@onready var footsteps := $FootSteps
 
 var current_music : AudioStream = null
 
-func play_sfx(sound: AudioStream):
+func play_foot_steps(sound: AudioStream):
+	if !footsteps.playing:
+		footsteps.stream = sound
+		footsteps.play()
+
+func stop_foot_steps():
+	footsteps.stop()
+
+func play_sfx(sound: AudioStream, volume: int = 0):
 	if !sfx.playing:
+		sfx.volume_db = volume
 		sfx.stream = sound
 		sfx.play()
 	elif !sfx2.playing:
+		sfx2.volume_db = volume
 		sfx2.stream = sound
 		sfx2.play()
 	else:

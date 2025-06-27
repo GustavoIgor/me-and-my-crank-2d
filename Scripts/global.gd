@@ -1,11 +1,15 @@
 extends Node
 
+#General
 signal no_energy
 signal energy_changed
 signal max_energy_changed
 signal stat_changed
 signal game_paused
 signal game_unpaused
+
+#Specific
+signal play_hand
 
 var energy := 50
 var max_energy : = 100

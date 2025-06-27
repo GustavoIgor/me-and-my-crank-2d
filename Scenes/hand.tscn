@@ -47,4 +47,12 @@ vertical_alignment = 1
 layout_mode = 2
 text = "USE"
 
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+step = 1.0
+
+[node name="ResultLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
 [connection signal="pressed" from="VBoxContainer/Use" to="." method="_on_use_pressed"]

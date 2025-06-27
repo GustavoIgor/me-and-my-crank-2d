@@ -10,3 +10,5 @@ script = ExtResource("1_32i44")
 [node name="SFX2" type="AudioStreamPlayer" parent="."]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="FootSteps" type="AudioStreamPlayer" parent="."]

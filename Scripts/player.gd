@@ -29,10 +29,10 @@ func animate_player(direction : Vector2):
 		pass
 		#animation.play("walk_left")
 		
-	SoundManager.play_sfx(preload("res://Assets/Songs/footsteps-male-362053.mp3"))
+	SoundManager.play_foot_steps(preload("res://Assets/Songs/footsteps-male-362053.mp3"))
 		
 	if direction == Vector2(0,0):
-		SoundManager.stop_all_sfx()
+		SoundManager.stop_foot_steps()
 		animation.play("idle")
 
 func _on_game_paused():
