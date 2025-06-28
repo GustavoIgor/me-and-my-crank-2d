@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://03w5rhs3b2ay"]
+[gd_scene load_steps=11 format=4 uid="uid://03w5rhs3b2ay"]
 
 [ext_resource type="Script" uid="uid://yxx1qw4pu3nn" path="res://Scripts/world.gd" id="1_a02cp"]
 [ext_resource type="Texture2D" uid="uid://cofcw11qeikna" path="res://Assets/Arts/ship.png" id="2_go701"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmbbywe6720a7" path="res://Scenes/crank_wall.tscn" id="5_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://cwia5l68fffq3" path="res://Scenes/hand_wall.tscn" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://bfms6guvtgcvm" path="res://Scenes/door.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://bgyv2c3e6elo1" path="res://Scenes/infuse_machine.tscn" id="8_k7acu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]
 texture = ExtResource("2_go701")
@@ -80,3 +81,6 @@ position = Vector2(815, 144)
 required_minerals = 30
 required_crystals = 15
 required_infuseds = 10
+
+[node name="InfuseMachine" parent="." instance=ExtResource("8_k7acu")]
+position = Vector2(528, -156)

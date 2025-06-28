@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ebaywwds5vbu"]
+[gd_scene load_steps=6 format=3 uid="uid://ebaywwds5vbu"]
 
 [ext_resource type="Script" uid="uid://rxkgxf3sojq" path="res://Scripts/utilities.gd" id="1_m1ny2"]
 [ext_resource type="PackedScene" uid="uid://466w605y66pe" path="res://Scenes/crank.tscn" id="1_om80o"]
 [ext_resource type="PackedScene" uid="uid://f3arbemxa4pe" path="res://Scenes/hand.tscn" id="3_4ipxg"]
 [ext_resource type="PackedScene" uid="uid://da6xbhbirc81" path="res://Scenes/door_panel.tscn" id="4_10a43"]
+[ext_resource type="PackedScene" uid="uid://c3optwc0hinc2" path="res://Scenes/infuser_panel.tscn" id="5_13i1j"]
 
 [node name="Utilities" type="CanvasLayer"]
 script = ExtResource("1_m1ny2")
@@ -15,4 +16,7 @@ visible = false
 visible = false
 
 [node name="DoorPanel" parent="." instance=ExtResource("4_10a43")]
+visible = false
+
+[node name="InfuserPanel" parent="." instance=ExtResource("5_13i1j")]
 visible = false

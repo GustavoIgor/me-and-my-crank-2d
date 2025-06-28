@@ -2,6 +2,7 @@ extends StaticBody2D
 @export var required_minerals: int = 5
 @export var required_crystals: int = 2
 @export var required_infuseds: int = 0
+@export var dialogue: String = ""
 
 @onready var sprite := $Sprite2D
 @onready var collider := $CollisionShape2D
@@ -20,6 +21,7 @@ func try_open():
 		Global.change_stats('crystals', -required_crystals)
 		Global.change_stats('infuseds', -required_infuseds)
 		open_door()
+		DialogueManager.start_dialogue(dialogue)
 		return true
 	else:
 		return false

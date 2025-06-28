@@ -15,8 +15,9 @@ var typing_speed = 0.03
 @onready var background = $BackGround
 @onready var choices_box = $Choices
 
-func start_dialogue(data: Array):
-	dialogue_data = data
+func start_dialogue(data: String):
+	Ui.hide()
+	dialogue_data = DialogueDataBase.get_dialogue(data)
 	current_index = 0
 	is_active = true
 	show()
@@ -60,6 +61,7 @@ func _on_choice_pressed(choice_text):
 	show_next()
 
 func end_dialogue():
+	Ui.show()
 	Global.game_unpaused.emit()
 	is_active = false
 	hide()

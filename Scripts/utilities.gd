@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var crank := $Crank
 @onready var hand := $Hand
 @onready var door_panel := $DoorPanel
+@onready var infuser_panel := $InfuserPanel
 
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
@@ -31,6 +32,13 @@ func hide_door_panel():
 func show_door_panel():
 	Global.game_paused.emit()
 	door_panel.show()
+
+func hide_infuser_panel():
+	infuser_panel.hide()
+
+func show_infuser_panel():
+	Global.game_paused.emit()
+	infuser_panel.show()
 
 func set_door(door):
 	door_panel.set_door(door)

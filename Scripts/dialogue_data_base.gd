@@ -1,6 +1,6 @@
 extends Node
 
-var dialogue_path = "res://JSONS/Dialogues/"
+var dialogue_path = "res://JSONS/"
 var cache = {}
 
 func get_dialogue(name: String) -> Array:
