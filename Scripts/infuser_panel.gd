@@ -2,7 +2,7 @@ extends Panel
 
 @onready var progress_bar := $VBoxContainer/ProgressBar
 @onready var result_label := $VBoxContainer/ResultLabel
-@onready var button := $VBoxContainer/Button
+@onready var button := $VBoxContainer/Infuse
 
 var cooldown_duration := 2.0
 var cooldown_time_left := 0.0

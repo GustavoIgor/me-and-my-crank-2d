@@ -37,11 +37,18 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "The hand is waiting to be used
+text = "The hand is waiting to be used.
 It costs 20 energy to get some
-minerals and crystals"
+minerals and crystals
+-
+You can aumotomate it
+with 10 infused materials"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Auto" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "ATUALIZE"
 
 [node name="Use" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -55,4 +62,5 @@ step = 1.0
 layout_mode = 2
 horizontal_alignment = 1
 
+[connection signal="pressed" from="VBoxContainer/Auto" to="." method="_on_auto_pressed"]
 [connection signal="pressed" from="VBoxContainer/Use" to="." method="_on_use_pressed"]

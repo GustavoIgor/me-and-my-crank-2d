@@ -45,6 +45,9 @@ rotation = -1.5708
 required_minerals = 15
 required_crystals = 10
 
+[node name="InfuseMachine" parent="." instance=ExtResource("8_k7acu")]
+position = Vector2(528, -156)
+
 [node name="Player" parent="." instance=ExtResource("3_5a7ea")]
 unique_name_in_owner = true
 position = Vector2(300, 156)
@@ -81,6 +84,3 @@ position = Vector2(815, 144)
 required_minerals = 30
 required_crystals = 15
 required_infuseds = 10
-
-[node name="InfuseMachine" parent="." instance=ExtResource("8_k7acu")]
-position = Vector2(528, -156)
