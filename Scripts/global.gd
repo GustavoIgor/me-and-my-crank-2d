@@ -20,10 +20,8 @@ var stats : Dictionary = {
 	"infuseds" : 0
 }
 
-var player_stats : Dictionary = {
-	"max_life" : 100,
-	"life" : 100
-}
+func _ready() -> void:
+	DialogueManager.choice_made.connect(_on_choice_made)
 
 func change_energy(amount : int):
 	energy = clamp(energy + amount, 0, max_energy)
@@ -38,3 +36,7 @@ func change_max_energy(amount : int):
 func change_stats(stat : String, amount : int):
 	stats[stat] += amount
 	stat_changed.emit()
+
+func _on_choice_made(choice : String):
+	if choice == "Saved":
+		Fade.fade_transition("res://Scenes/end_screen.tscn")

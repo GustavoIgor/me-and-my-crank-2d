@@ -4,8 +4,12 @@ extends Node
 @onready var sfx2 := $SFX2
 @onready var music := $Music
 @onready var footsteps := $FootSteps
+@onready var ambient := $Ambient
 
 var current_music : AudioStream = null
+
+func _ready() -> void:
+	ambient.stream = load("res://Assets/Songs/room-with-buzz-incandescent-light-bulb-23892.mp3")
 
 func play_foot_steps(sound: AudioStream):
 	if !footsteps.playing:
@@ -45,3 +49,9 @@ func stop_music():
 func stop_all_sfx():
 	sfx.stop()
 	sfx2.stop()
+
+func play_ambient():
+	ambient.play()
+
+func stop_ambient():
+	ambient.stop()

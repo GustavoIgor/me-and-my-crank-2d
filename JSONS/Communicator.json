@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Lucas",
+		"text": "Hello! Hello! It's Lucas Anguerra calling from planet Nera!",
+	},
+	{
+		"name": "Narrator",
+		"text": "Some bips are heard, no voices",
+	},
+	{
+		"name": "Lucas",
+		"text": "Help, please!",
+	},
+	{
+		"name": "Narrator",
+		"text": "He continue for some hours, until someone responds",
+	},
+	{
+		"name": "Voice",
+		"text": "Hello, Mister Anguerra, help is comming, go to the commanding room to be saved.",
+	},
+	{
+		"name": "Lucas",
+		"text": "Roger that.",
+	},
+	{
+		"name": "Narrator",
+		"text": "He recompose himself, he is saved, just have to open the last door.",
+	},
+]

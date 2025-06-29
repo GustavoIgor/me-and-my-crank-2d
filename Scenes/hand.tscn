@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://o7me2q5ludil" path="res://Scripts/hand.gd" id="1_f6hnx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1ny2"]
-bg_color = Color(1, 0.0627451, 0.847059, 0.184314)
+bg_color = Color(0.631373, 0, 0.568627, 0.705882)
 
 [node name="Hand" type="Panel"]
 custom_minimum_size = Vector2(640, 400)
@@ -41,7 +41,7 @@ text = "The hand is waiting to be used.
 It costs 20 energy to get some
 minerals and crystals
 -
-You can aumotomate it
+You can automate it
 with 10 infused materials"
 horizontal_alignment = 1
 vertical_alignment = 1

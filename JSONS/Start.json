@@ -1,7 +1,30 @@
 [
 	{
-		"name": "Lucas",
-		"text": "So, here I'm. Lost in a planet without a sunlight",
+		"name": "Narrator",
+		"text": "Lucas is a enginner and he was sent to study a strange planet in a distant solar system.",
 		"background": "res://Assets/Arts/BlackScreen.png"
+	},
+	{
+		"Narrator": "Narrator",
+		"text": "This Planet is Nera, no sunlight in here.",
+		"background": "res://Assets/Arts/planet.png"
+	},
+	{
+		"name": "Narrator",
+		"text": "He misscalculated the aproximation with the planet, crashing on it.",
+		"background": "res://Assets/Arts/BlackScreen.png",
+		"sfx": "res://Assets/Songs/crash.mp3"
+	},
+	{
+		"name": "Narrator",
+		"text": "He get stuck in a room, just having a crank to generate eletric energy from cinetic motion.",
+		"background": "res://Assets/Arts/BlackScreen.png"
+	},
+	{
+		"name": "Lucas",
+		"text": "So, here I'm. Lost in a planet without a sunlight.",
+	},
+	{
+		"text": "Click on the objects and use 'esc' to close the windows. Use the resources to open the doors.",
 	}
 ]

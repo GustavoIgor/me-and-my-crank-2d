@@ -96,7 +96,7 @@ func _on_auto_pressed() -> void:
 
 func update_automation_button():
 	if !automation_unlocked:
-		auto_button.text = "Automatize"
+		auto_button.text = "Automate"
 	elif automation_enabled:
 		auto_button.text = "TURN OFF"
 	else:

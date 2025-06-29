@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 var game_paused = false
 
-var speed = 70
+var speed = 100
 
 func _ready() -> void:
 	Global.game_paused.connect(_on_game_paused)
@@ -23,11 +23,9 @@ func animate_player(direction : Vector2):
 	elif direction.y < 0:
 		animation.play("walk_up")
 	elif direction.x > 0:
-		pass
-		#animation.play("walk_right")
+		animation.play("walk_right")
 	elif direction.x < 0:
-		pass
-		#animation.play("walk_left")
+		animation.play("walk_left")
 		
 	SoundManager.play_foot_steps(preload("res://Assets/Songs/footsteps-male-362053.mp3"))
 		

@@ -34,12 +34,26 @@ text = "The hand SFX"
 underline = 1
 uri = "https://pixabay.com/sound-effects/steampunk-mechanical-gadget-188052/"
 
-[node name="LinkButton" type="LinkButton" parent="Panel/VBoxContainer"]
+[node name="FootStepsLinkButton" type="LinkButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Foot Steps"
 underline = 1
 uri = "https://pixabay.com/sound-effects/footsteps-male-362053/"
+
+[node name="AmbientLinkButton" type="LinkButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ambient sound"
+underline = 1
+uri = "https://pixabay.com/sound-effects/room-with-buzz-incandescent-light-bulb-23892/"
+
+[node name="CrashLinkButton" type="LinkButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Crash sfx"
+underline = 1
+uri = "https://pixabay.com/sound-effects/wooden-ship-break-85277/"
 
 [node name="Return" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2

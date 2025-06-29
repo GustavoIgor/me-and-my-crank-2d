@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://undaavn16mpc"]
+
+[ext_resource type="Texture2D" uid="uid://dynck8xotb22b" path="res://Assets/Arts/end_game.png" id="1_5j2cu"]
+[ext_resource type="Script" uid="uid://csnuu4l1u8uon" path="res://Scripts/end.gd" id="1_xmt8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmt8n"]
+size = Vector2(23, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02kpm"]
+radius = 48.0104
+
+[node name="End" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 7
+input_pickable = true
+script = ExtResource("1_xmt8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5j2cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_xmt8n")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_02kpm")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

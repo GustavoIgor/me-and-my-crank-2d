@@ -13,13 +13,17 @@ var typing_speed = 0.03
 @onready var text_label = $Panel/HBoxContainer/Message
 @onready var icon = $Panel/HBoxContainer/VBoxContainer/Icon
 @onready var background = $BackGround
+@onready var background2 = $BackGround2
 @onready var choices_box = $Choices
 
 func start_dialogue(data: String):
+	if is_active:
+		return
 	Ui.hide()
 	dialogue_data = DialogueDataBase.get_dialogue(data)
 	current_index = 0
 	is_active = true
+	SoundManager.stop_ambient()
 	show()
 	show_next()
 
@@ -38,6 +42,11 @@ func show_next():
 	name_label.text = entry.get("name", "")
 	icon.texture = load(entry.get("icon", ""))
 	background.texture = load(entry.get("background", ""))
+	background2.texture = load(entry.get("background2", ""))
+	if entry.get("music", ""):
+		SoundManager.play_music(entry.get("music", ""))
+	if entry.get("sfx", ""):
+		SoundManager.play_sfx(load(entry.get("sfx", "")), -20)
 	
 	var text = entry.get("text", "")
 	await type_text(text)
@@ -65,6 +74,7 @@ func end_dialogue():
 	Global.game_unpaused.emit()
 	is_active = false
 	hide()
+	SoundManager.play_ambient()
 	dialogue_ended.emit()
 
 func _unhandled_input(event):

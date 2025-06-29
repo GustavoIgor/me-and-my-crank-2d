@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ck4m0pdbyqpcu" path="res://Scripts/infuser_panel.gd" id="1_livl0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh7gh"]
-bg_color = Color(0.0745098, 0.188235, 0, 0.490196)
+bg_color = Color(0.0745098, 0.188235, 0, 0.705882)
 
 [node name="InfuserPanel" type="Panel"]
 custom_minimum_size = Vector2(640, 400)

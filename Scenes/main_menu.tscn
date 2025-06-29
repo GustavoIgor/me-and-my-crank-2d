@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dld3ludxvfn0m"]
+[gd_scene load_steps=3 format=3 uid="uid://dld3ludxvfn0m"]
 
 [ext_resource type="Script" uid="uid://bk0rxuq14pfow" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://cb7b38ykarwrp" path="res://Assets/Arts/planet.png" id="2_48xlc"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_28flt")
@@ -13,8 +14,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_48xlc")
+
 [node name="Panel" type="Panel" parent="Control"]
-custom_minimum_size = Vector2(300, 500)
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -22,14 +32,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -250.0
+offset_top = -150.0
 offset_right = 150.0
-offset_bottom = 250.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
-custom_minimum_size = Vector2(280, 460)
+custom_minimum_size = Vector2(280, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,11 +47,17 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -140.0
-offset_top = -230.0
+offset_top = -150.0
 offset_right = 140.0
-offset_bottom = 230.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "ME AND MY CRANK
+A game by Mago Incerto"
+horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="Control/Panel/VBoxContainer"]
 layout_mode = 2

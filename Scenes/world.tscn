@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://03w5rhs3b2ay"]
+[gd_scene load_steps=13 format=4 uid="uid://03w5rhs3b2ay"]
 
 [ext_resource type="Script" uid="uid://yxx1qw4pu3nn" path="res://Scripts/world.gd" id="1_a02cp"]
 [ext_resource type="Texture2D" uid="uid://cofcw11qeikna" path="res://Assets/Arts/ship.png" id="2_go701"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cwia5l68fffq3" path="res://Scenes/hand_wall.tscn" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://bfms6guvtgcvm" path="res://Scenes/door.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://bgyv2c3e6elo1" path="res://Scenes/infuse_machine.tscn" id="8_k7acu"]
+[ext_resource type="PackedScene" uid="uid://ckr2y1q5m7mkn" path="res://Scenes/communicator.tscn" id="9_0fj1v"]
+[ext_resource type="PackedScene" uid="uid://undaavn16mpc" path="res://Scenes/end.tscn" id="10_ikia7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]
 texture = ExtResource("2_go701")
@@ -44,9 +46,16 @@ position = Vector2(528, 16)
 rotation = -1.5708
 required_minerals = 15
 required_crystals = 10
+dialogue = "door2"
 
 [node name="InfuseMachine" parent="." instance=ExtResource("8_k7acu")]
 position = Vector2(528, -156)
+
+[node name="Communicator" parent="." instance=ExtResource("9_0fj1v")]
+position = Vector2(526, 402)
+
+[node name="End" parent="." instance=ExtResource("10_ikia7")]
+position = Vector2(1002, 132)
 
 [node name="Player" parent="." instance=ExtResource("3_5a7ea")]
 unique_name_in_owner = true
@@ -71,6 +80,7 @@ position = Vector2(144, 145)
 
 [node name="Door" parent="." instance=ExtResource("7_o06y3")]
 position = Vector2(400, 144)
+dialogue = "door1"
 
 [node name="Door3" parent="." instance=ExtResource("7_o06y3")]
 position = Vector2(528, 272)
@@ -78,9 +88,11 @@ rotation = 1.5708
 required_minerals = 20
 required_crystals = 10
 required_infuseds = 5
+dialogue = "door3"
 
 [node name="Door4" parent="." instance=ExtResource("7_o06y3")]
 position = Vector2(815, 144)
 required_minerals = 30
 required_crystals = 15
 required_infuseds = 10
+dialogue = "door4"

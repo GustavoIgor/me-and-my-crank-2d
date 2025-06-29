@@ -12,3 +12,5 @@ script = ExtResource("1_32i44")
 [node name="Music" type="AudioStreamPlayer" parent="."]
 
 [node name="FootSteps" type="AudioStreamPlayer" parent="."]
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]

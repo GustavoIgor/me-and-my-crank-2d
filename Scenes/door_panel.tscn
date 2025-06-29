@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://7kj5vgelf74d" path="res://Scripts/door_panel.gd" id="1_eeeot"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rplbg"]
-bg_color = Color(0.27451, 0.603922, 1, 0.4)
+bg_color = Color(0.27451, 0.603922, 1, 0.705882)
 
 [node name="DoorPanel" type="Panel"]
 custom_minimum_size = Vector2(640, 400)

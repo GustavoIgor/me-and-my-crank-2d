@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d1m3v6ytj1717" path="res://Scripts/crank.gd" id="1_wditd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lakht"]
-bg_color = Color(0.270588, 0.14902, 0.0313726, 0.509804)
+bg_color = Color(0.270588, 0.14902, 0.0313726, 0.705882)
 
 [node name="Crank" type="Panel"]
 custom_minimum_size = Vector2(640, 400)
